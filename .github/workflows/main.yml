@@ -1,0 +1,44 @@
+name: build, push and deploy Docker image
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  PROD_NAMESPACE: prod
+  DEV_NAMESPACE: develop
+
+#============================================================================= build
+
+jobs:
+  build_naharekari_backend_project_prod:
+    name: Build
+    #container: docker.iranrepo.ir/docker:stable
+    runs-on: Linux
+    env:
+      PROJECT_NAME: naharekari-backend
+      REPO_DIR: ${PROD_NAMESPACE}
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker image
+        run: |
+          docker build --network host --tag registry.gitlab.com/naqshava/naharekari/naharekari-backend/prod:latest -f $PWD/Dockerfile .
+
+#============================================================================= deploy
+
+  deploy_naharekari_backend_project_prod:
+    name: deploy
+    needs: [build_naharekari_backend_project_prod]
+    env:
+      PROJECT_NAME: naharekari-backend
+      REPO_DIR: ${PROD_NAMESPACE}
+    runs-on: Linux
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy Docker Image
+        run: |
+          sshpass -p ${{vars.DEVELOP_PASS}} ssh -o StrictHostKeyChecking=no root@193.151.129.40 "sudo /bin/bash /opt/app/naharekari_back/naharekari.sh"

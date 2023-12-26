@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AbstractValidator\**" />
+    <Compile Remove="Behaviors\**" />
+    <EmbeddedResource Remove="AbstractValidator\**" />
+    <EmbeddedResource Remove="Behaviors\**" />
+    <None Remove="AbstractValidator\**" />
+    <None Remove="Behaviors\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BuildingBlocks\BuildingBlocks.csproj" />
+    <ProjectReference Include="..\ArianTel.DAL.EF\ArianTel.DAL.EF.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{98D1C81C-8F71-485D-B562-62972FA6F877}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{B8F66D45-D746-416B-8E17-D6CCF20EA3D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1BA4730-C368-4C39-BD6F-AE8D225EE286}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		AssemblyInfo.cs = AssemblyInfo.cs
+		BannedSymbols.txt = BannedSymbols.txt
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks", "src\BuildingBlocks\BuildingBlocks.csproj", "{FB7BFDCE-8A3C-4314-B12E-2C577923E64C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArianTel.API", "src\ArianTel.API\ArianTel.API.csproj", "{470BCDE4-56F4-4F44-BE4B-A2334BA245C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArianTel.Core", "src\ArianTel.Core\ArianTel.Core.csproj", "{CECB8D54-B745-4AFE-A724-7E0A74D24195}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArianTel.DAL.EF", "src\ArianTel.DAL.EF\ArianTel.DAL.EF.csproj", "{CEC60A8D-B7DD-4429-A182-08C7565D35AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArianTel.Service", "src\ArianTel.Service\ArianTel.Service.csproj", "{244B5D8A-9CBC-451B-A713-BD150F799F11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB7BFDCE-8A3C-4314-B12E-2C577923E64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB7BFDCE-8A3C-4314-B12E-2C577923E64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB7BFDCE-8A3C-4314-B12E-2C577923E64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB7BFDCE-8A3C-4314-B12E-2C577923E64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470BCDE4-56F4-4F44-BE4B-A2334BA245C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470BCDE4-56F4-4F44-BE4B-A2334BA245C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470BCDE4-56F4-4F44-BE4B-A2334BA245C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470BCDE4-56F4-4F44-BE4B-A2334BA245C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CECB8D54-B745-4AFE-A724-7E0A74D24195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CECB8D54-B745-4AFE-A724-7E0A74D24195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CECB8D54-B745-4AFE-A724-7E0A74D24195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CECB8D54-B745-4AFE-A724-7E0A74D24195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEC60A8D-B7DD-4429-A182-08C7565D35AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC60A8D-B7DD-4429-A182-08C7565D35AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC60A8D-B7DD-4429-A182-08C7565D35AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC60A8D-B7DD-4429-A182-08C7565D35AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{244B5D8A-9CBC-451B-A713-BD150F799F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{244B5D8A-9CBC-451B-A713-BD150F799F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{244B5D8A-9CBC-451B-A713-BD150F799F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{244B5D8A-9CBC-451B-A713-BD150F799F11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB7BFDCE-8A3C-4314-B12E-2C577923E64C} = {B8F66D45-D746-416B-8E17-D6CCF20EA3D9}
+		{470BCDE4-56F4-4F44-BE4B-A2334BA245C9} = {98D1C81C-8F71-485D-B562-62972FA6F877}
+		{CECB8D54-B745-4AFE-A724-7E0A74D24195} = {98D1C81C-8F71-485D-B562-62972FA6F877}
+		{CEC60A8D-B7DD-4429-A182-08C7565D35AD} = {98D1C81C-8F71-485D-B562-62972FA6F877}
+		{244B5D8A-9CBC-451B-A713-BD150F799F11} = {98D1C81C-8F71-485D-B562-62972FA6F877}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92A442CE-06BA-42BD-AE56-1F0B0D4A1101}
+	EndGlobalSection
+EndGlobal
